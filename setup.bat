@@ -21,9 +21,11 @@ cd /d "%~dp0"
 
 :: Install requirements
 echo Installing Requirements...
-python -m pip install -r requirements.txt
+py -m ensurepip --upgrade
+py -m pip install -U pip
+py -m pip install -r requirements.txt
 
 :: Check for updates
 cd tools
 echo Checking for updates...
-python update.py
+py update.py
